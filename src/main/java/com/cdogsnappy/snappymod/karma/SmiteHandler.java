@@ -47,10 +47,10 @@ public class SmiteHandler {
             int score = SnappyMod.k.karmaScores.get(p.getUUID()).getScore();
             if(rand.nextFloat() <= Math.max(Math.abs(score),1)*threshold){
                 if(score<0){
-                    smite(p,p.serverLevel());
+                    smite(p,p.getLevel());
                 }
                 else{
-                    grace(p,p.serverLevel());
+                    grace(p,p.getLevel());
                 }
             }
 
